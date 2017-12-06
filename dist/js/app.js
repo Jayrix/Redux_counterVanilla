@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', function(){
                 return state
         }
     }
-    var store = Redux.createStore(counter)
-    var valueEl = document.getElementById('value')
+    var store = Redux.createStore(counter);
+    var valueEl = document.getElementById('value');
     function render() {
         valueEl.innerHTML = store.getState().toString()
-    }
-    render()
-    store.subscribe(render)
+    };
+    render();
+    store.subscribe(render);
     document.getElementById('increment')
         .addEventListener('click', function () {
             store.dispatch({ type: 'INCREMENT' })
